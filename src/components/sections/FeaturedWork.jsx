@@ -6,19 +6,19 @@ import CaseStudyCard from '../ui/CaseStudyCard'
 import { caseStudies } from '../../data/caseStudies'
 
 export default function FeaturedWork() {
-    // Show first 3 case studies
-    const featuredProjects = caseStudies.slice(0, 3)
+    // Show first 4 case studies for 2x2 grid matching user's design
+    const featuredProjects = caseStudies.slice(0, 4)
 
     return (
-        <section className="section-padding bg-dark-50">
+        <section className="section-padding bg-gray-950">
             <div className="container-custom">
                 <SectionHeading
-                    label="Featured Work"
+                    label="Our Works"
                     title="Our Recent Projects"
                     subtitle="From logo design to full digital transformations, explore how we've helped businesses achieve remarkable results."
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                     {featuredProjects.map((project, index) => (
                         <motion.div
                             key={project.id}
@@ -40,7 +40,7 @@ export default function FeaturedWork() {
                 >
                     <Link
                         to="/portfolio"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-dark-100 text-dark-800 font-bold rounded-xl border-2 border-dark-300 hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 text-white font-bold rounded-xl border-2 border-gray-700 hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300"
                     >
                         View All Work
                         <ArrowRight className="w-5 h-5" />

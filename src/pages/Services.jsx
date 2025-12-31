@@ -16,7 +16,10 @@ const serviceImages = {
     'mobile-app-design': 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80',
     'ecommerce': 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
     'digital-marketing': 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&q=80',
-    'digital-strategy': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80'
+    'digital-strategy': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    'graphic-design': 'https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?w=800&q=80',
+    'content-writing': 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80',
+    'video-creation': 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80'
 }
 
 export default function Services() {
@@ -28,13 +31,13 @@ export default function Services() {
             </Helmet>
 
             {/* Hero Section */}
-            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-black via-gray-950 to-black">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center">
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide uppercase rounded-full bg-primary-100 text-primary-600"
+                            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide uppercase rounded-full bg-primary-500/20 text-primary-400"
                         >
                             Our Services
                         </motion.span>
@@ -42,7 +45,7 @@ export default function Services() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-dark-900 mb-6"
+                            className="text-white mb-6"
                         >
                             Comprehensive <span className="gradient-text">Digital Solutions</span>
                         </motion.h1>
@@ -50,7 +53,7 @@ export default function Services() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-lg md:text-xl text-dark-500"
+                            className="text-lg md:text-xl text-gray-400"
                         >
                             From strategy to execution, we offer end-to-end digital services that help businesses thrive in the digital age.
                         </motion.p>
@@ -82,10 +85,10 @@ export default function Services() {
                                         <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} mb-6`}>
                                             <Icon className="w-8 h-8 text-white" />
                                         </div>
-                                        <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-4">
+                                        <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                                             {service.title}
                                         </h2>
-                                        <p className="text-lg text-dark-600 mb-6">
+                                        <p className="text-lg text-gray-400 mb-6">
                                             {service.description}
                                         </p>
 
@@ -94,14 +97,14 @@ export default function Services() {
                                             {service.features.map((feature, i) => (
                                                 <div key={i} className="flex items-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-primary-500" />
-                                                    <span className="text-sm text-dark-600">{feature}</span>
+                                                    <span className="text-sm text-gray-400">{feature}</span>
                                                 </div>
                                             ))}
                                         </div>
 
                                         <Link
                                             to={`/services/${service.id}`}
-                                            className="inline-flex items-center gap-2 text-primary-500 font-semibold group"
+                                            className="inline-flex items-center gap-2 text-primary-400 font-semibold group"
                                         >
                                             Learn More
                                             <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
@@ -123,9 +126,9 @@ export default function Services() {
                                             <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-20`} />
 
                                             {/* Service badge */}
-                                            <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-                                                <Icon className="w-5 h-5 text-primary-500" />
-                                                <span className="text-sm font-semibold text-dark-900">{service.title}</span>
+                                            <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-gray-900/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-gray-700">
+                                                <Icon className="w-5 h-5 text-primary-400" />
+                                                <span className="text-sm font-semibold text-white">{service.title}</span>
                                             </div>
                                         </motion.div>
                                     </div>

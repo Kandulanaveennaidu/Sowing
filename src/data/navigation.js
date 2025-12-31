@@ -54,9 +54,9 @@ export const contactInfo = {
 }
 
 export const stats = [
-    { value: '8+', label: 'Years Experience' },
+    { value: '1+', label: 'Years Experience' },
     { value: '150+', label: 'Projects Delivered' },
-    { value: '50+', label: 'Happy Clients' },
+    { value: '20+', label: 'Happy Clients' },
     { value: '15+', label: 'Team Members' }
 ]
 

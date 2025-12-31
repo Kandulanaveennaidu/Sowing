@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, BarChart3, TrendingUp, Sprout, Award } from 'lucide-react'
+import { ArrowRight, Sparkles, BarChart3, TrendingUp, Award } from 'lucide-react'
 import Button from '../ui/Button'
 
 export default function Hero() {
@@ -8,7 +8,7 @@ export default function Hero() {
             {/* Background Elements */}
             <div className="absolute inset-0 -z-10">
                 {/* Gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-950 to-black" />
 
                 {/* Animated gradient orbs */}
                 <motion.div
@@ -21,7 +21,7 @@ export default function Hero() {
                         repeat: Infinity,
                         ease: "linear"
                     }}
-                    className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-primary-400/20 to-accent-400/20 blur-3xl"
+                    className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-primary-600/20 to-accent-600/20 blur-3xl"
                 />
                 <motion.div
                     animate={{
@@ -33,11 +33,11 @@ export default function Hero() {
                         repeat: Infinity,
                         ease: "linear"
                     }}
-                    className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-accent-400/20 to-primary-400/20 blur-3xl"
+                    className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-accent-600/20 to-primary-600/20 blur-3xl"
                 />
 
                 {/* Grid pattern */}
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgwLDAsMCwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50" />
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50" />
             </div>
 
             <div className="container-custom">
@@ -47,11 +47,11 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary-100 border border-primary-200"
+                        className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary-500/10 border border-primary-500/30"
                     >
-                        <Sprout className="w-4 h-4 text-primary-600" />
-                        <span className="text-sm font-semibold text-primary-700">
-                            Digital Seeds That Grow Brands
+                        <Sparkles className="w-4 h-4 text-primary-400" />
+                        <span className="text-sm font-semibold text-primary-300 uppercase tracking-wider">
+                            AGENCY
                         </span>
                     </motion.div>
 
@@ -60,10 +60,11 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-dark-900 mb-6 text-balance"
+                        className="text-white mb-6 text-balance"
                     >
-                        Make Your Business{' '}
-                        <span className="gradient-text">A Brand</span>
+                        Creative digital agency{' '}
+                        <br className="hidden sm:block" />
+                        <span className="gradient-text">to scale - up your business</span>
                     </motion.h1>
 
                     {/* Taglines with Icons */}
@@ -73,18 +74,18 @@ export default function Hero() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="flex flex-wrap items-center justify-center gap-4 mb-4"
                     >
-                        <div className="flex items-center gap-2 text-dark-700">
-                            <BarChart3 className="w-5 h-5 text-primary-500" />
+                        <div className="flex items-center gap-2 text-gray-300">
+                            <BarChart3 className="w-5 h-5 text-primary-400" />
                             <span className="font-semibold">Digital Marketing</span>
                         </div>
-                        <div className="w-1.5 h-1.5 rounded-full bg-dark-400 hidden sm:block" />
-                        <div className="flex items-center gap-2 text-dark-700">
-                            <TrendingUp className="w-5 h-5 text-accent-500" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-gray-600 hidden sm:block" />
+                        <div className="flex items-center gap-2 text-gray-300">
+                            <TrendingUp className="w-5 h-5 text-accent-400" />
                             <span className="font-semibold">Management</span>
                         </div>
-                        <div className="w-1.5 h-1.5 rounded-full bg-dark-400 hidden sm:block" />
-                        <div className="flex items-center gap-2 text-dark-700">
-                            <Award className="w-5 h-5 text-primary-500" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-gray-600 hidden sm:block" />
+                        <div className="flex items-center gap-2 text-gray-300">
+                            <Award className="w-5 h-5 text-primary-400" />
                             <span className="font-semibold">From Vision to Victory</span>
                         </div>
                     </motion.div>
@@ -93,9 +94,9 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.25 }}
-                        className="text-base md:text-lg text-dark-600 mb-8 max-w-2xl mx-auto"
+                        className="text-base md:text-lg text-gray-400 mb-8 max-w-2xl mx-auto"
                     >
-                        <span className="font-semibold text-dark-700">UI/UX Design</span> • <span className="font-semibold text-dark-700">Web Development</span> • <span className="font-semibold text-dark-700">Logo Design</span> • <span className="font-semibold text-dark-700">SEO</span> • <span className="font-semibold text-dark-700">Digital Marketing</span>
+                        <span className="font-semibold text-gray-300">UI/UX Design</span> • <span className="font-semibold text-gray-300">Web Development</span> • <span className="font-semibold text-gray-300">Logo Design</span> • <span className="font-semibold text-gray-300">SEO</span> • <span className="font-semibold text-gray-300">Digital Marketing</span>
                     </motion.p>
 
                     {/* CTAs */}
@@ -118,25 +119,25 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-dark-200"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-16 pt-16 border-t border-white/10"
                     >
                         {[
-                            { value: '8+', label: 'Years Experience' },
-                            { value: '150+', label: 'Projects Delivered' },
-                            { value: '50+', label: 'Happy Clients' },
-                            { value: '99%', label: 'Client Satisfaction' }
+                            { value: '1+', label: 'Years Experience' },
+                            { value: '150+', label: 'Projects Completed' },
+                            { value: '20+', label: 'Happy Clients' },
+                            { value: '15+', label: 'Team Members' }
                         ].map((stat, index) => (
                             <motion.div
                                 key={stat.label}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                                className="text-center"
+                                className="text-center group"
                             >
-                                <div className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-1">
+                                <div className="text-3xl md:text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-1">
                                     {stat.value}
                                 </div>
-                                <div className="text-sm font-medium text-dark-600">
+                                <div className="text-sm font-medium text-gray-400">
                                     {stat.label}
                                 </div>
                             </motion.div>
@@ -155,9 +156,9 @@ export default function Hero() {
                 <motion.div
                     animate={{ y: [0, 8, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
-                    className="w-6 h-10 rounded-full border-2 border-dark-400 flex justify-center pt-2"
+                    className="w-6 h-10 rounded-full border-2 border-gray-600 flex justify-center pt-2"
                 >
-                    <div className="w-1.5 h-2 rounded-full bg-dark-500" />
+                    <div className="w-1.5 h-2 rounded-full bg-gray-500" />
                 </motion.div>
             </motion.div>
         </section>

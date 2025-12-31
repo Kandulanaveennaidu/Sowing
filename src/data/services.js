@@ -14,7 +14,10 @@ import {
     Globe,
     Megaphone,
     ShoppingCart,
-    FileImage
+    FileImage,
+    Brush,
+    FileText,
+    Video
 } from 'lucide-react'
 
 export const services = [
@@ -367,6 +370,111 @@ export const services = [
             { step: 'Implement', description: 'Executing high-impact initiatives' },
             { step: 'Measure', description: 'Tracking results and optimizing' }
         ]
+    },
+    {
+        id: 'graphic-design',
+        title: 'Graphic Design',
+        shortDescription: 'Visual designs that communicate and captivate.',
+        description: 'We create stunning visual designs for print and digital media. From marketing materials to social media graphics, our designs capture attention and communicate your message effectively.',
+        icon: Brush,
+        color: 'from-fuchsia-500 to-pink-500',
+        features: [
+            'Marketing Collateral',
+            'Social Media Graphics',
+            'Presentation Design',
+            'Print Design',
+            'Infographics',
+            'Banner Design'
+        ],
+        deliverables: [
+            'High-resolution design files',
+            'Print-ready formats',
+            'Social media sized graphics',
+            'Source files (AI, PSD)',
+            'Brand-aligned visuals'
+        ],
+        benefits: [
+            'Professional visual presence',
+            'Consistent brand imagery',
+            'Engaging marketing materials',
+            'Higher audience engagement'
+        ],
+        process: [
+            { step: 'Brief', description: 'Understanding design requirements' },
+            { step: 'Concept', description: 'Developing creative concepts' },
+            { step: 'Design', description: 'Creating polished designs' },
+            { step: 'Deliver', description: 'Final files in all formats' }
+        ]
+    },
+    {
+        id: 'content-writing',
+        title: 'Content Writing',
+        shortDescription: 'Compelling content that engages and converts.',
+        description: 'We craft compelling content that tells your story and drives action. From website copy to blog posts, our words connect with your audience and support your business goals.',
+        icon: FileText,
+        color: 'from-sky-500 to-blue-500',
+        features: [
+            'Website Copywriting',
+            'Blog Posts & Articles',
+            'SEO Content',
+            'Email Campaigns',
+            'Social Media Content',
+            'Product Descriptions'
+        ],
+        deliverables: [
+            'SEO-optimized content',
+            'Edited and proofread copy',
+            'Content calendar',
+            'Brand voice guidelines',
+            'Multiple revision rounds'
+        ],
+        benefits: [
+            'Improved search rankings',
+            'Higher engagement rates',
+            'Consistent brand voice',
+            'Better conversion rates'
+        ],
+        process: [
+            { step: 'Research', description: 'Understanding audience and goals' },
+            { step: 'Outline', description: 'Structuring the content' },
+            { step: 'Write', description: 'Crafting compelling copy' },
+            { step: 'Refine', description: 'Editing and optimization' }
+        ]
+    },
+    {
+        id: 'video-creation',
+        title: 'Video Creation',
+        shortDescription: 'Engaging videos that tell your brand story.',
+        description: 'We produce high-quality videos that captivate audiences and communicate your message. From promotional videos to social media content, we bring your vision to life.',
+        icon: Video,
+        color: 'from-red-500 to-rose-500',
+        features: [
+            'Promotional Videos',
+            'Social Media Videos',
+            'Motion Graphics',
+            'Video Editing',
+            'Animation',
+            'Video Ads'
+        ],
+        deliverables: [
+            'High-quality video files',
+            'Multiple format exports',
+            'Social media optimized versions',
+            'Thumbnail designs',
+            'Raw footage (if applicable)'
+        ],
+        benefits: [
+            'Higher engagement rates',
+            'Better brand recall',
+            'Increased conversions',
+            'Shareable content'
+        ],
+        process: [
+            { step: 'Concept', description: 'Developing the video concept' },
+            { step: 'Script', description: 'Writing and storyboarding' },
+            { step: 'Produce', description: 'Filming and editing' },
+            { step: 'Deliver', description: 'Final video in all formats' }
+        ]
     }
 ]
 
@@ -390,34 +498,10 @@ export const servicesOverview = [
         link: '/services/logo-design'
     },
     {
-        icon: Sparkles,
-        title: 'Branding',
-        description: 'Memorable brand identities that capture your essence and connect.',
-        link: '/services/branding'
-    },
-    {
         icon: Search,
         title: 'SEO Optimization',
         description: 'Boost your visibility and rank higher on search engines.',
         link: '/services/seo-optimization'
-    },
-    {
-        icon: Layers,
-        title: 'Product Design',
-        description: 'End-to-end product design from concept to launch and beyond.',
-        link: '/services/product-design'
-    },
-    {
-        icon: Smartphone,
-        title: 'Mobile App Design',
-        description: 'Native app experiences for iOS and Android platforms.',
-        link: '/services/mobile-app-design'
-    },
-    {
-        icon: ShoppingCart,
-        title: 'E-Commerce',
-        description: 'Online stores that convert visitors into loyal customers.',
-        link: '/services/ecommerce'
     },
     {
         icon: Megaphone,
@@ -426,11 +510,30 @@ export const servicesOverview = [
         link: '/services/digital-marketing'
     },
     {
-        icon: TrendingUp,
-        title: 'Digital Strategy',
-        description: 'Data-driven strategies and consulting for digital growth.',
-        link: '/services/digital-strategy'
+        icon: Brush,
+        title: 'Graphic Design',
+        description: 'Visual designs for print and digital that captivate audiences.',
+        link: '/services/graphic-design'
+    },
+    {
+        icon: FileText,
+        title: 'Content Writing',
+        description: 'Compelling content that engages your audience and converts.',
+        link: '/services/content-writing'
+    },
+    {
+        icon: Video,
+        title: 'Video Creation',
+        description: 'Engaging videos that tell your brand story effectively.',
+        link: '/services/video-creation'
+    },
+    {
+        icon: Smartphone,
+        title: 'Mobile App Design',
+        description: 'Native app experiences for iOS and Android platforms.',
+        link: '/services/mobile-app-design'
     }
 ]
 
 export default services
+

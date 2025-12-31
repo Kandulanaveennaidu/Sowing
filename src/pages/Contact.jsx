@@ -59,13 +59,13 @@ export default function Contact() {
             </Helmet>
 
             {/* Hero Section */}
-            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-black via-gray-950 to-black">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center">
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide uppercase rounded-full bg-primary-100 text-primary-600"
+                            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide uppercase rounded-full bg-primary-500/20 text-primary-400"
                         >
                             Get In Touch
                         </motion.span>
@@ -73,7 +73,7 @@ export default function Contact() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-dark-900 mb-6"
+                            className="text-white mb-6"
                         >
                             Let's <span className="gradient-text">Start a Project</span> Together
                         </motion.h1>
@@ -81,7 +81,7 @@ export default function Contact() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-lg md:text-xl text-dark-500"
+                            className="text-lg md:text-xl text-gray-400"
                         >
                             Have a project in mind? We'd love to hear about it. Fill out the form below and we'll get back to you within 24 hours.
                         </motion.p>
@@ -100,10 +100,10 @@ export default function Contact() {
                             viewport={{ once: true }}
                             className="lg:col-span-2"
                         >
-                            <h2 className="text-2xl md:text-3xl font-display font-bold text-dark-900 mb-6">
+                            <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-6">
                                 Contact Information
                             </h2>
-                            <p className="text-dark-500 mb-8">
+                            <p className="text-gray-400 mb-8">
                                 Reach out through any of these channels. We're here to help and answer any questions you might have.
                             </p>
 
@@ -113,17 +113,17 @@ export default function Contact() {
                                     const content = (
                                         <div className="flex items-start gap-4">
                                             <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${item.label === 'WhatsApp'
-                                                    ? 'bg-green-100'
-                                                    : 'bg-primary-100'
+                                                ? 'bg-green-500/20'
+                                                : 'bg-primary-500/20'
                                                 }`}>
-                                                <Icon className={`w-6 h-6 ${item.label === 'WhatsApp' ? 'text-green-500' : 'text-primary-500'
+                                                <Icon className={`w-6 h-6 ${item.label === 'WhatsApp' ? 'text-green-400' : 'text-primary-400'
                                                     }`} />
                                             </div>
                                             <div>
-                                                <p className="text-sm text-dark-500 mb-1">
+                                                <p className="text-sm text-gray-500 mb-1">
                                                     {item.label}
                                                 </p>
-                                                <p className="font-medium text-dark-900">
+                                                <p className="font-medium text-white">
                                                     {item.value}
                                                 </p>
                                             </div>
@@ -140,7 +140,7 @@ export default function Contact() {
                                             whileInView={{ opacity: 1, y: 0 }}
                                             viewport={{ once: true }}
                                             transition={{ delay: index * 0.1 }}
-                                            className="block hover:bg-dark-50 -mx-4 px-4 py-3 rounded-xl transition-colors"
+                                            className="block hover:bg-gray-800/50 -mx-4 px-4 py-3 rounded-xl transition-colors"
                                         >
                                             {content}
                                         </motion.a>
@@ -190,7 +190,7 @@ export default function Contact() {
             </section>
 
             {/* FAQ Section */}
-            <section className="section-padding bg-dark-50">
+            <section className="section-padding bg-gray-950">
                 <div className="container-custom">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -198,10 +198,10 @@ export default function Contact() {
                         viewport={{ once: true }}
                         className="max-w-3xl mx-auto text-center mb-12"
                     >
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                             Frequently Asked Questions
                         </h2>
-                        <p className="text-dark-500">
+                        <p className="text-gray-400">
                             Quick answers to common questions about working with us.
                         </p>
                     </motion.div>
@@ -215,12 +215,12 @@ export default function Contact() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="bg-white rounded-xl p-6 border border-dark-100"
+                                    className="bg-gray-900 rounded-xl p-6 border border-gray-800"
                                 >
-                                    <h3 className="text-lg font-semibold text-dark-900 mb-2">
+                                    <h3 className="text-lg font-semibold text-white mb-2">
                                         {faq.question}
                                     </h3>
-                                    <p className="text-dark-500">
+                                    <p className="text-gray-400">
                                         {faq.answer}
                                     </p>
                                 </motion.div>
@@ -231,13 +231,13 @@ export default function Contact() {
             </section>
 
             {/* Map placeholder */}
-            <section className="h-[400px] bg-dark-200 flex items-center justify-center">
+            <section className="h-[400px] bg-gray-900 flex items-center justify-center border-t border-gray-800">
                 <div className="text-center">
-                    <MapPin className="w-12 h-12 text-dark-400 mx-auto mb-4" />
-                    <p className="text-dark-600 font-medium">
+                    <MapPin className="w-12 h-12 text-gray-600 mx-auto mb-4" />
+                    <p className="text-gray-300 font-medium">
                         {contactInfo.address}
                     </p>
-                    <p className="text-dark-500 text-sm mt-1">
+                    <p className="text-gray-500 text-sm mt-1">
                         Hyderabad, Telangana, India
                     </p>
                 </div>

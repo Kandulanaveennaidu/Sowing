@@ -4,10 +4,11 @@ import { ArrowRight, Loader2 } from 'lucide-react'
 
 const variants = {
     primary: 'bg-gradient-to-r from-primary-500 to-accent-500 text-white shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30',
-    secondary: 'bg-dark-100 text-dark-800 border-2 border-dark-300 hover:bg-primary-500 hover:text-white hover:border-primary-500',
-    outline: 'bg-transparent border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white',
-    ghost: 'bg-transparent text-dark-700 hover:bg-dark-100 hover:text-dark-900',
-    white: 'bg-white text-dark-900 hover:bg-primary-500 hover:text-white shadow-lg'
+    secondary: 'bg-gray-800 text-white border-2 border-gray-700 hover:bg-gray-700 hover:border-gray-600',
+    outline: 'bg-transparent border-2 border-primary-500 text-primary-400 hover:bg-primary-500 hover:text-white',
+    ghost: 'bg-transparent text-gray-300 hover:bg-gray-800 hover:text-white',
+    white: 'bg-white text-gray-900 hover:bg-gray-100 shadow-lg',
+    'white-outline': 'bg-transparent border-2 border-white text-white hover:bg-white/10'
 }
 
 const sizes = {

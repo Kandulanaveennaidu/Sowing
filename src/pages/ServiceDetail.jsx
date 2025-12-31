@@ -24,7 +24,7 @@ export default function ServiceDetail() {
             </Helmet>
 
             {/* Hero Section */}
-            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-dark-900 dark:via-dark-900 dark:to-dark-800">
+            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-black via-gray-950 to-black">
                 <div className="container-custom">
                     {/* Back link */}
                     <motion.div
@@ -34,7 +34,7 @@ export default function ServiceDetail() {
                     >
                         <Link
                             to="/services"
-                            className="inline-flex items-center gap-2 text-dark-500 dark:text-dark-400 hover:text-primary-500 transition-colors"
+                            className="inline-flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors"
                         >
                             <ArrowLeft className="w-4 h-4" />
                             Back to Services
@@ -54,7 +54,7 @@ export default function ServiceDetail() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 }}
-                                className="text-dark-900 dark:text-white mb-6"
+                                className="text-white mb-6"
                             >
                                 {service.title}
                             </motion.h1>
@@ -62,7 +62,7 @@ export default function ServiceDetail() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
-                                className="text-lg md:text-xl text-dark-500 dark:text-dark-400 mb-8"
+                                className="text-lg md:text-xl text-gray-400 mb-8"
                             >
                                 {service.description}
                             </motion.p>
@@ -98,10 +98,10 @@ export default function ServiceDetail() {
                         viewport={{ once: true }}
                         className="max-w-3xl mx-auto text-center mb-12"
                     >
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 dark:text-white mb-4">
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                             What's Included
                         </h2>
-                        <p className="text-dark-500 dark:text-dark-400">
+                        <p className="text-gray-400">
                             Our comprehensive {service.title.toLowerCase()} service covers everything you need.
                         </p>
                     </motion.div>
@@ -114,13 +114,13 @@ export default function ServiceDetail() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="flex items-start gap-4 p-6 bg-white dark:bg-dark-800 rounded-xl border border-dark-100 dark:border-dark-700"
+                                className="flex items-start gap-4 p-6 bg-gray-900 rounded-xl border border-gray-800"
                             >
-                                <div className="w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
-                                    <CheckCircle className="w-5 h-5 text-primary-500" />
+                                <div className="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center flex-shrink-0">
+                                    <CheckCircle className="w-5 h-5 text-primary-400" />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-dark-900 dark:text-white">
+                                    <h3 className="font-semibold text-white">
                                         {feature}
                                     </h3>
                                 </div>
@@ -131,7 +131,7 @@ export default function ServiceDetail() {
             </section>
 
             {/* Process Section */}
-            <section className="section-padding bg-dark-50 dark:bg-dark-800/50">
+            <section className="section-padding bg-gray-950">
                 <div className="container-custom">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -139,10 +139,10 @@ export default function ServiceDetail() {
                         viewport={{ once: true }}
                         className="max-w-3xl mx-auto text-center mb-12"
                     >
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 dark:text-white mb-4">
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                             Our Process
                         </h2>
-                        <p className="text-dark-500 dark:text-dark-400">
+                        <p className="text-gray-400">
                             A proven methodology that ensures successful project delivery.
                         </p>
                     </motion.div>
@@ -155,15 +155,15 @@ export default function ServiceDetail() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="relative bg-white dark:bg-dark-800 rounded-xl p-6 border border-dark-100 dark:border-dark-700"
+                                className="relative bg-gray-900 rounded-xl p-6 border border-gray-800"
                             >
                                 <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-sm">
                                     {index + 1}
                                 </div>
-                                <h3 className="text-lg font-bold text-dark-900 dark:text-white mb-2 mt-2">
+                                <h3 className="text-lg font-bold text-white mb-2 mt-2">
                                     {step.step}
                                 </h3>
-                                <p className="text-dark-500 dark:text-dark-400 text-sm">
+                                <p className="text-gray-400 text-sm">
                                     {step.description}
                                 </p>
                             </motion.div>
@@ -182,14 +182,14 @@ export default function ServiceDetail() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-2xl md:text-3xl font-display font-bold text-dark-900 dark:text-white mb-6">
+                            <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-6">
                                 What You'll Receive
                             </h2>
                             <div className="space-y-4">
                                 {service.deliverables.map((deliverable, index) => (
                                     <div key={index} className="flex items-start gap-3">
                                         <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                                        <span className="text-dark-600 dark:text-dark-300">{deliverable}</span>
+                                        <span className="text-gray-300">{deliverable}</span>
                                     </div>
                                 ))}
                             </div>
@@ -201,14 +201,14 @@ export default function ServiceDetail() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-2xl md:text-3xl font-display font-bold text-dark-900 dark:text-white mb-6">
+                            <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-6">
                                 Key Benefits
                             </h2>
                             <div className="space-y-4">
                                 {service.benefits.map((benefit, index) => (
                                     <div key={index} className="flex items-start gap-3">
-                                        <ArrowRight className="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" />
-                                        <span className="text-dark-600 dark:text-dark-300">{benefit}</span>
+                                        <ArrowRight className="w-6 h-6 text-primary-400 flex-shrink-0 mt-0.5" />
+                                        <span className="text-gray-300">{benefit}</span>
                                     </div>
                                 ))}
                             </div>
@@ -221,3 +221,4 @@ export default function ServiceDetail() {
         </>
     )
 }
+

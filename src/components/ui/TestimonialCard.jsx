@@ -16,12 +16,12 @@ export default function TestimonialCard({
         <motion.div
             whileHover={{ y: -4 }}
             className={`
-        relative bg-white rounded-2xl border border-dark-100 shadow-sm
+        relative bg-gray-900 rounded-2xl border border-gray-800 shadow-sm hover:border-primary-500/50 transition-colors
         ${isLarge ? 'p-8 md:p-12' : 'p-6'}
       `}
         >
             {/* Quote icon */}
-            <Quote className={`text-primary-200 mb-4 ${isLarge ? 'w-12 h-12' : 'w-8 h-8'}`} />
+            <Quote className={`text-primary-500/30 mb-4 ${isLarge ? 'w-12 h-12' : 'w-8 h-8'}`} />
 
             {/* Rating */}
             <div className="flex gap-1 mb-4">
@@ -29,15 +29,15 @@ export default function TestimonialCard({
                     <Star
                         key={i}
                         className={`w-4 h-4 ${i < rating
-                                ? 'text-yellow-400 fill-yellow-400'
-                                : 'text-dark-200'
+                            ? 'text-yellow-400 fill-yellow-400'
+                            : 'text-gray-700'
                             }`}
                     />
                 ))}
             </div>
 
             {/* Quote */}
-            <blockquote className={`text-dark-700 mb-6 leading-relaxed ${isLarge ? 'text-lg md:text-xl' : ''}`}>
+            <blockquote className={`text-gray-300 mb-6 leading-relaxed ${isLarge ? 'text-lg md:text-xl' : ''}`}>
                 "{quote}"
             </blockquote>
 
@@ -51,8 +51,8 @@ export default function TestimonialCard({
                     />
                 )}
                 <div>
-                    <p className="font-semibold text-dark-900">{author}</p>
-                    <p className="text-sm text-dark-500">
+                    <p className="font-semibold text-white">{author}</p>
+                    <p className="text-sm text-gray-500">
                         {role} at {company}
                     </p>
                 </div>

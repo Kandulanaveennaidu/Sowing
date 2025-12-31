@@ -72,16 +72,16 @@ export default function ProcessTimeline() {
                                         >
                                             <Icon className="w-8 h-8 text-white" />
                                             {/* Step number */}
-                                            <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white dark:bg-dark-800 shadow-md flex items-center justify-center">
-                                                <span className="text-sm font-bold text-dark-900 dark:text-white">{step.step}</span>
+                                            <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gray-900 shadow-md flex items-center justify-center border border-gray-700">
+                                                <span className="text-sm font-bold text-white">{step.step}</span>
                                             </div>
                                         </motion.div>
 
                                         {/* Content */}
-                                        <h3 className="text-xl font-bold text-dark-900 dark:text-white mb-3">
+                                        <h3 className="text-xl font-bold text-white mb-3">
                                             {step.title}
                                         </h3>
-                                        <p className="text-dark-500 dark:text-dark-400 leading-relaxed">
+                                        <p className="text-gray-400 leading-relaxed">
                                             {step.description}
                                         </p>
                                     </div>
@@ -101,7 +101,7 @@ export default function ProcessTimeline() {
                 >
                     <a
                         href="/process"
-                        className="inline-flex items-center gap-2 text-primary-500 dark:text-primary-400 font-medium hover:gap-3 transition-all"
+                        className="inline-flex items-center gap-2 text-primary-400 font-medium hover:gap-3 transition-all"
                     >
                         Learn more about our process
                         <motion.span

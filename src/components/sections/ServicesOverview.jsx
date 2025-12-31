@@ -48,7 +48,7 @@ export default function ServicesOverview() {
                     {!showAll && servicesOverview.length > 6 && (
                         <button
                             onClick={() => setShowAll(true)}
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-dark-800 text-dark-900 dark:text-white font-semibold rounded-xl border-2 border-dark-200 dark:border-dark-600 hover:border-primary-500 hover:text-primary-500 dark:hover:border-primary-400 dark:hover:text-primary-400 transition-all duration-300"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 text-white font-semibold rounded-xl border-2 border-gray-700 hover:border-primary-500 hover:text-primary-400 transition-all duration-300"
                         >
                             View All Services
                             <ArrowRight className="w-5 h-5" />
@@ -57,7 +57,7 @@ export default function ServicesOverview() {
                     {showAll && (
                         <Link
                             to="/services"
-                            className="inline-flex items-center gap-2 text-primary-500 dark:text-primary-400 font-semibold hover:gap-3 transition-all"
+                            className="inline-flex items-center gap-2 text-primary-400 font-semibold hover:gap-3 transition-all"
                         >
                             Explore All Services in Detail
                             <ArrowRight className="w-5 h-5" />

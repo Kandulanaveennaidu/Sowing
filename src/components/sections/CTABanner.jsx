@@ -42,18 +42,19 @@ export default function CTABanner() {
                             transition={{ delay: 0.2 }}
                             className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4 max-w-3xl mx-auto"
                         >
-                            Ready to Transform Your Digital Presence?
+                            Let's work together!<br />Send us a message
                         </motion.h2>
 
-                        <motion.p
+                        <motion.a
+                            href="mailto:sowingspace01@gmail.com"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.3 }}
-                            className="text-lg text-white/80 mb-8 max-w-xl mx-auto"
+                            className="text-lg text-white/80 mb-8 block hover:text-white transition-colors"
                         >
-                            Let's discuss your project and explore how we can help you achieve your business goals.
-                        </motion.p>
+                            📧 sowingspace01@gmail.com
+                        </motion.a>
 
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -65,7 +66,7 @@ export default function CTABanner() {
                             <Button to="/contact" variant="white" size="lg">
                                 Book a Free Strategy Call
                             </Button>
-                            <Button to="/portfolio" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary-600">
+                            <Button to="/portfolio" variant="white-outline" size="lg">
                                 View Our Work
                             </Button>
                         </motion.div>

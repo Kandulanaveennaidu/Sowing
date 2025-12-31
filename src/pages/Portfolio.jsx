@@ -22,13 +22,13 @@ export default function Portfolio() {
             </Helmet>
 
             {/* Hero Section */}
-            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-black via-gray-950 to-black">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center">
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide uppercase rounded-full bg-primary-100 text-primary-600"
+                            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide uppercase rounded-full bg-primary-500/20 text-primary-400"
                         >
                             Our Work
                         </motion.span>
@@ -36,7 +36,7 @@ export default function Portfolio() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-dark-900 mb-6"
+                            className="text-white mb-6"
                         >
                             Case Studies & <span className="gradient-text">Portfolio</span>
                         </motion.h1>
@@ -44,7 +44,7 @@ export default function Portfolio() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-lg md:text-xl text-dark-500"
+                            className="text-lg md:text-xl text-gray-400"
                         >
                             Explore our portfolio of successful projects in Logo Design, SEO, Digital Marketing, Web Development, and more.
                         </motion.p>
@@ -71,7 +71,7 @@ export default function Portfolio() {
                   transition-all duration-300
                   ${activeCategory === category
                                         ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white shadow-lg'
-                                        : 'bg-dark-100 text-dark-600 hover:bg-dark-200'
+                                        : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
                                     }
                 `}
                             >
@@ -107,7 +107,7 @@ export default function Portfolio() {
                             animate={{ opacity: 1 }}
                             className="text-center py-16"
                         >
-                            <p className="text-dark-500">
+                            <p className="text-gray-400">
                                 No projects found in this category.
                             </p>
                         </motion.div>

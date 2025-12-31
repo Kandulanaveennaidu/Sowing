@@ -11,10 +11,10 @@ export default function Card({
 }) {
     const baseClasses = glass
         ? 'glass-card rounded-2xl'
-        : 'bg-white dark:bg-dark-800 rounded-2xl border border-dark-100 dark:border-dark-700 shadow-card'
+        : 'bg-gray-900 rounded-2xl border border-gray-800 shadow-card'
 
     const hoverClasses = hover
-        ? 'hover:shadow-card-hover hover:-translate-y-1 hover:border-primary-200 dark:hover:border-primary-800'
+        ? 'hover:shadow-card-hover hover:-translate-y-1 hover:border-primary-500/50'
         : ''
 
     return (
@@ -39,3 +39,4 @@ export default function Card({
         </motion.div>
     )
 }
+

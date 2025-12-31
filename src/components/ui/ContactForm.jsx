@@ -85,20 +85,20 @@ export default function ContactForm() {
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-green-50 rounded-2xl p-8 md:p-12 text-center"
+                className="bg-green-500/10 rounded-2xl p-8 md:p-12 text-center border border-green-500/30"
             >
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="w-8 h-8 text-green-500" />
+                <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="w-8 h-8 text-green-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-dark-900 mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4">
                     Message Sent Successfully!
                 </h3>
-                <p className="text-dark-600 mb-6">
+                <p className="text-gray-400 mb-6">
                     Thank you for reaching out. We'll get back to you within 24 hours.
                 </p>
                 <button
                     onClick={() => setStatus('idle')}
-                    className="text-primary-500 font-semibold hover:text-primary-600 transition-colors"
+                    className="text-primary-400 font-semibold hover:text-primary-300 transition-colors"
                 >
                     Send another message
                 </button>
@@ -107,15 +107,15 @@ export default function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 md:p-8 border border-dark-100 shadow-sm">
-            <h3 className="text-2xl font-bold text-dark-900 mb-6">
+        <form onSubmit={handleSubmit} className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 shadow-sm">
+            <h3 className="text-2xl font-bold text-white mb-6">
                 Send Us a Message
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Name */}
                 <div>
-                    <label htmlFor="name" className="label">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
                     </label>
                     <input
@@ -124,17 +124,17 @@ export default function ContactForm() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className={`input ${errors.name ? 'border-red-500' : ''}`}
+                        className={`w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all ${errors.name ? 'border-red-500' : ''}`}
                         placeholder="John Doe"
                     />
                     {errors.name && (
-                        <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                        <p className="text-red-400 text-sm mt-1">{errors.name}</p>
                     )}
                 </div>
 
                 {/* Email */}
                 <div>
-                    <label htmlFor="email" className="label">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                         Email Address *
                     </label>
                     <input
@@ -143,17 +143,17 @@ export default function ContactForm() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`input ${errors.email ? 'border-red-500' : ''}`}
+                        className={`w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all ${errors.email ? 'border-red-500' : ''}`}
                         placeholder="john@example.com"
                     />
                     {errors.email && (
-                        <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                        <p className="text-red-400 text-sm mt-1">{errors.email}</p>
                     )}
                 </div>
 
                 {/* Company */}
                 <div>
-                    <label htmlFor="company" className="label">
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                         Company Name
                     </label>
                     <input
@@ -162,14 +162,14 @@ export default function ContactForm() {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="input"
+                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                         placeholder="Your Company"
                     />
                 </div>
 
                 {/* Service */}
                 <div>
-                    <label htmlFor="service" className="label">
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                         Service Interested In
                     </label>
                     <select
@@ -177,7 +177,7 @@ export default function ContactForm() {
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="input"
+                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                     >
                         <option value="">Select a service</option>
                         {services.map(service => (
@@ -188,7 +188,7 @@ export default function ContactForm() {
 
                 {/* Budget */}
                 <div className="md:col-span-2">
-                    <label htmlFor="budget" className="label">
+                    <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
                         Budget Range
                     </label>
                     <select
@@ -196,7 +196,7 @@ export default function ContactForm() {
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
-                        className="input"
+                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                     >
                         <option value="">Select your budget</option>
                         {budgets.map(budget => (
@@ -207,7 +207,7 @@ export default function ContactForm() {
 
                 {/* Message */}
                 <div className="md:col-span-2">
-                    <label htmlFor="message" className="label">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                         Project Details *
                     </label>
                     <textarea
@@ -216,17 +216,17 @@ export default function ContactForm() {
                         value={formData.message}
                         onChange={handleChange}
                         rows={5}
-                        className={`input resize-none ${errors.message ? 'border-red-500' : ''}`}
+                        className={`w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none ${errors.message ? 'border-red-500' : ''}`}
                         placeholder="Tell us about your project..."
                     />
                     {errors.message && (
-                        <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                        <p className="text-red-400 text-sm mt-1">{errors.message}</p>
                     )}
                 </div>
             </div>
 
             {status === 'error' && (
-                <div className="flex items-center gap-2 mt-4 p-4 bg-red-50 rounded-lg text-red-600">
+                <div className="flex items-center gap-2 mt-4 p-4 bg-red-500/10 rounded-lg text-red-400 border border-red-500/30">
                     <AlertCircle className="w-5 h-5" />
                     <span>Something went wrong. Please try again.</span>
                 </div>

@@ -14,13 +14,13 @@ export default function Process() {
             </Helmet>
 
             {/* Hero Section */}
-            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-dark-900 dark:via-dark-900 dark:to-dark-800">
+            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-black via-gray-950 to-black">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center">
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide uppercase rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400"
+                            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide uppercase rounded-full bg-primary-500/20 text-primary-400"
                         >
                             Our Process
                         </motion.span>
@@ -28,7 +28,7 @@ export default function Process() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-dark-900 dark:text-white mb-6"
+                            className="text-white mb-6"
                         >
                             How We <span className="gradient-text">Bring Ideas to Life</span>
                         </motion.h1>
@@ -36,7 +36,7 @@ export default function Process() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-lg md:text-xl text-dark-500 dark:text-dark-400"
+                            className="text-lg md:text-xl text-gray-400"
                         >
                             Our proven 4-step methodology ensures every project is delivered with excellence, on time, and within budget.
                         </motion.p>
@@ -65,10 +65,10 @@ export default function Process() {
                                     >
                                         <Icon className="w-8 h-8 text-white" />
                                     </motion.div>
-                                    <h3 className="text-lg font-bold text-dark-900 dark:text-white mb-1">
+                                    <h3 className="text-lg font-bold text-white mb-1">
                                         {step.phase}
                                     </h3>
-                                    <p className="text-sm text-dark-500 dark:text-dark-400">
+                                    <p className="text-sm text-gray-400">
                                         {step.duration}
                                     </p>
                                 </motion.div>
@@ -79,7 +79,7 @@ export default function Process() {
             </section>
 
             {/* Detailed Process */}
-            <section className="section-padding bg-dark-50 dark:bg-dark-800/50">
+            <section className="section-padding bg-gray-950">
                 <div className="container-custom">
                     <SectionHeading
                         label="Step by Step"
@@ -97,14 +97,14 @@ export default function Process() {
                                 transition={{ delay: index * 0.1 }}
                                 className="mb-12 last:mb-0"
                             >
-                                <div className="bg-white dark:bg-dark-800 rounded-2xl p-6 md:p-8 border border-dark-100 dark:border-dark-700">
+                                <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800">
                                     <div className="flex flex-col md:flex-row md:items-start gap-6">
                                         {/* Icon and number */}
                                         <div className="flex-shrink-0">
                                             <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center`}>
                                                 <step.icon className="w-8 h-8 text-white" />
-                                                <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white dark:bg-dark-800 shadow-md flex items-center justify-center">
-                                                    <span className="text-sm font-bold text-dark-900 dark:text-white">{step.id}</span>
+                                                <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gray-900 shadow-md flex items-center justify-center border border-gray-700">
+                                                    <span className="text-sm font-bold text-white">{step.id}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,31 +113,31 @@ export default function Process() {
                                         <div className="flex-1">
                                             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
                                                 <div>
-                                                    <span className="text-sm font-semibold text-primary-500 uppercase tracking-wider">
+                                                    <span className="text-sm font-semibold text-primary-400 uppercase tracking-wider">
                                                         {step.phase}
                                                     </span>
-                                                    <h3 className="text-xl md:text-2xl font-bold text-dark-900 dark:text-white">
+                                                    <h3 className="text-xl md:text-2xl font-bold text-white">
                                                         {step.title}
                                                     </h3>
                                                 </div>
-                                                <span className="text-sm text-dark-500 dark:text-dark-400 bg-dark-100 dark:bg-dark-700 px-3 py-1 rounded-full">
+                                                <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
                                                     {step.duration}
                                                 </span>
                                             </div>
 
-                                            <p className="text-dark-600 dark:text-dark-300 mb-6">
+                                            <p className="text-gray-400 mb-6">
                                                 {step.description}
                                             </p>
 
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                 {/* Activities */}
                                                 <div>
-                                                    <h4 className="text-sm font-semibold text-dark-500 dark:text-dark-400 uppercase tracking-wider mb-3">
+                                                    <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                                                         Key Activities
                                                     </h4>
                                                     <ul className="space-y-2">
                                                         {step.activities.map((activity, i) => (
-                                                            <li key={i} className="flex items-center gap-2 text-dark-600 dark:text-dark-300 text-sm">
+                                                            <li key={i} className="flex items-center gap-2 text-gray-300 text-sm">
                                                                 <div className="w-1.5 h-1.5 rounded-full bg-primary-500" />
                                                                 {activity}
                                                             </li>
@@ -147,12 +147,12 @@ export default function Process() {
 
                                                 {/* Deliverables */}
                                                 <div>
-                                                    <h4 className="text-sm font-semibold text-dark-500 dark:text-dark-400 uppercase tracking-wider mb-3">
+                                                    <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                                                         Deliverables
                                                     </h4>
                                                     <ul className="space-y-2">
                                                         {step.deliverables.map((deliverable, i) => (
-                                                            <li key={i} className="flex items-center gap-2 text-dark-600 dark:text-dark-300 text-sm">
+                                                            <li key={i} className="flex items-center gap-2 text-gray-300 text-sm">
                                                                 <div className="w-1.5 h-1.5 rounded-full bg-accent-500" />
                                                                 {deliverable}
                                                             </li>
@@ -184,10 +184,10 @@ export default function Process() {
                         viewport={{ once: true }}
                         className="max-w-4xl mx-auto"
                     >
-                        <div className="bg-white dark:bg-dark-800 rounded-2xl p-6 md:p-8 border border-dark-100 dark:border-dark-700">
+                        <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800">
                             <div className="relative">
                                 {/* Timeline bar */}
-                                <div className="absolute top-6 left-0 right-0 h-2 bg-dark-100 dark:bg-dark-700 rounded-full overflow-hidden">
+                                <div className="absolute top-6 left-0 right-0 h-2 bg-gray-800 rounded-full overflow-hidden">
                                     <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-blue-500 via-purple-500 via-emerald-500 to-orange-500" />
                                 </div>
 
@@ -195,13 +195,13 @@ export default function Process() {
                                 <div className="relative flex justify-between pt-0">
                                     {processSteps.map((step, index) => (
                                         <div key={step.id} className="text-center">
-                                            <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto mb-3 ring-4 ring-white dark:ring-dark-800`}>
+                                            <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto mb-3 ring-4 ring-gray-900`}>
                                                 <step.icon className="w-6 h-6 text-white" />
                                             </div>
-                                            <p className="text-sm font-semibold text-dark-900 dark:text-white">
+                                            <p className="text-sm font-semibold text-white">
                                                 {step.phase}
                                             </p>
-                                            <p className="text-xs text-dark-500 dark:text-dark-400">
+                                            <p className="text-xs text-gray-400">
                                                 {step.duration}
                                             </p>
                                         </div>

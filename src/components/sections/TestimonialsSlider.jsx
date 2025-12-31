@@ -15,7 +15,7 @@ export default function TestimonialsSlider() {
     const swiperRef = useRef(null)
 
     return (
-        <section className="section-padding bg-dark-50 dark:bg-dark-800/50 overflow-hidden">
+        <section className="section-padding bg-gray-950 overflow-hidden">
             <div className="container-custom">
                 <SectionHeading
                     label="Testimonials"
@@ -30,7 +30,7 @@ export default function TestimonialsSlider() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => swiperRef.current?.slidePrev()}
-                            className="w-12 h-12 rounded-full bg-white dark:bg-dark-700 shadow-md flex items-center justify-center text-dark-600 dark:text-dark-300 hover:bg-primary-500 hover:text-white transition-colors"
+                            className="w-12 h-12 rounded-full bg-gray-800 shadow-md flex items-center justify-center text-gray-300 hover:bg-primary-500 hover:text-white transition-colors border border-gray-700"
                             aria-label="Previous testimonial"
                         >
                             <ChevronLeft className="w-5 h-5" />
@@ -39,7 +39,7 @@ export default function TestimonialsSlider() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => swiperRef.current?.slideNext()}
-                            className="w-12 h-12 rounded-full bg-white dark:bg-dark-700 shadow-md flex items-center justify-center text-dark-600 dark:text-dark-300 hover:bg-primary-500 hover:text-white transition-colors"
+                            className="w-12 h-12 rounded-full bg-gray-800 shadow-md flex items-center justify-center text-gray-300 hover:bg-primary-500 hover:text-white transition-colors border border-gray-700"
                             aria-label="Next testimonial"
                         >
                             <ChevronRight className="w-5 h-5" />

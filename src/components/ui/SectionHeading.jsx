@@ -21,17 +21,17 @@ export default function SectionHeading({
             className={`max-w-3xl mb-12 md:mb-16 ${alignmentClasses[align]}`}
         >
             {label && (
-                <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold tracking-wide uppercase rounded-full bg-primary-100 text-primary-700">
+                <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold tracking-wide uppercase rounded-full bg-primary-500/20 text-primary-400">
                     {label}
                 </span>
             )}
             {title && (
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-dark-900 mb-4">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
                     {title}
                 </h2>
             )}
             {subtitle && (
-                <p className="text-lg text-dark-600">
+                <p className="text-lg text-gray-400">
                     {subtitle}
                 </p>
             )}

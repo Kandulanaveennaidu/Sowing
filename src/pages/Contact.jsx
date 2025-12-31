@@ -172,7 +172,7 @@ export default function Contact() {
                                         Chat on WhatsApp
                                     </h3>
                                 </div>
-                                <p className="text-white/80 text-sm mb-4">
+                                <p className="text-sm mb-4" style={{ color: '#ffffff' }}>
                                     Get instant response! Chat with us on WhatsApp for quick queries and project discussions.
                                 </p>
                                 <span className="inline-flex items-center gap-2 text-white font-medium hover:gap-3 transition-all">

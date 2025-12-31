@@ -27,7 +27,7 @@ export default function CaseStudy() {
             </Helmet>
 
             {/* Hero Section */}
-            <section className="pt-32 pb-16 md:pt-40 md:pb-20">
+            <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-black via-gray-950 to-black">
                 <div className="container-custom">
                     {/* Back link */}
                     <motion.div
@@ -37,7 +37,7 @@ export default function CaseStudy() {
                     >
                         <Link
                             to="/portfolio"
-                            className="inline-flex items-center gap-2 text-dark-500 dark:text-dark-400 hover:text-primary-500 transition-colors"
+                            className="inline-flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors"
                         >
                             <ArrowLeft className="w-4 h-4" />
                             Back to Portfolio
@@ -55,7 +55,7 @@ export default function CaseStudy() {
                                 {project.tags.map((tag) => (
                                     <span
                                         key={tag}
-                                        className="px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400"
+                                        className="px-3 py-1 text-sm font-medium rounded-full bg-primary-500/20 text-primary-400"
                                     >
                                         {tag}
                                     </span>
@@ -66,7 +66,7 @@ export default function CaseStudy() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 }}
-                                className="text-dark-900 dark:text-white mb-4"
+                                className="text-white mb-4"
                             >
                                 {project.title}
                             </motion.h1>
@@ -75,7 +75,7 @@ export default function CaseStudy() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.15 }}
-                                className="text-xl text-primary-500 font-medium mb-4"
+                                className="text-xl text-primary-400 font-medium mb-4"
                             >
                                 {project.client}
                             </motion.p>
@@ -84,7 +84,7 @@ export default function CaseStudy() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
-                                className="text-lg text-dark-500 dark:text-dark-400 mb-6"
+                                className="text-lg text-gray-400 mb-6"
                             >
                                 {project.summary}
                             </motion.p>
@@ -95,14 +95,14 @@ export default function CaseStudy() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.25 }}
                             >
-                                <p className="text-sm font-medium text-dark-500 dark:text-dark-400 mb-2">
+                                <p className="text-sm font-medium text-gray-400 mb-2">
                                     Services Provided:
                                 </p>
                                 <div className="flex flex-wrap gap-2">
                                     {project.services.map((service) => (
                                         <span
                                             key={service}
-                                            className="px-3 py-1 text-sm bg-dark-100 dark:bg-dark-700 text-dark-600 dark:text-dark-300 rounded-full"
+                                            className="px-3 py-1 text-sm bg-gray-800 text-gray-300 rounded-full"
                                         >
                                             {service}
                                         </span>
@@ -115,7 +115,7 @@ export default function CaseStudy() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.2 }}
-                            className="aspect-[4/3] rounded-2xl overflow-hidden"
+                            className="aspect-[4/3] rounded-2xl overflow-hidden border border-gray-800"
                         >
                             <img
                                 src={project.heroImage}
@@ -128,18 +128,19 @@ export default function CaseStudy() {
             </section>
 
             {/* Problem & Solution */}
-            <section className="section-padding bg-dark-50 dark:bg-dark-800/50">
+            <section className="section-padding bg-gray-950">
                 <div className="container-custom">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
+                            className="bg-gray-900 rounded-2xl p-8 border border-gray-800"
                         >
-                            <h2 className="text-2xl md:text-3xl font-display font-bold text-dark-900 dark:text-white mb-4">
+                            <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
                                 The Challenge
                             </h2>
-                            <p className="text-dark-600 dark:text-dark-300 leading-relaxed">
+                            <p className="text-gray-300 leading-relaxed">
                                 {project.problem}
                             </p>
                         </motion.div>
@@ -149,11 +150,12 @@ export default function CaseStudy() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
+                            className="bg-gray-900 rounded-2xl p-8 border border-gray-800"
                         >
-                            <h2 className="text-2xl md:text-3xl font-display font-bold text-dark-900 dark:text-white mb-4">
+                            <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
                                 Our Solution
                             </h2>
-                            <p className="text-dark-600 dark:text-dark-300 leading-relaxed">
+                            <p className="text-gray-300 leading-relaxed">
                                 {project.solution}
                             </p>
                         </motion.div>
@@ -170,10 +172,10 @@ export default function CaseStudy() {
                         viewport={{ once: true }}
                         className="text-center mb-12"
                     >
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 dark:text-white mb-4">
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                             The Results
                         </h2>
-                        <p className="text-dark-500 dark:text-dark-400">
+                        <p className="text-gray-400">
                             Measurable outcomes that demonstrate the impact of our work.
                         </p>
                     </motion.div>
@@ -186,12 +188,12 @@ export default function CaseStudy() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="text-center bg-white dark:bg-dark-800 rounded-2xl p-6 border border-dark-100 dark:border-dark-700"
+                                className="text-center bg-gray-900 rounded-2xl p-6 border border-gray-800"
                             >
-                                <div className="text-3xl md:text-4xl font-display font-bold gradient-text mb-2">
+                                <div className="text-3xl md:text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 mb-2">
                                     {result.metric}
                                 </div>
-                                <p className="text-dark-500 dark:text-dark-400 text-sm">
+                                <p className="text-gray-400 text-sm">
                                     {result.label}
                                 </p>
                             </motion.div>
@@ -228,7 +230,7 @@ export default function CaseStudy() {
             )}
 
             {/* Navigation */}
-            <section className="py-12 border-t border-dark-100 dark:border-dark-800">
+            <section className="py-12 border-t border-gray-800">
                 <div className="container-custom">
                     <div className="flex justify-between items-center">
                         {prevProject ? (
@@ -236,10 +238,10 @@ export default function CaseStudy() {
                                 to={`/portfolio/${prevProject.id}`}
                                 className="flex items-center gap-3 group"
                             >
-                                <ArrowLeft className="w-5 h-5 text-dark-400 group-hover:text-primary-500 group-hover:-translate-x-1 transition-all" />
+                                <ArrowLeft className="w-5 h-5 text-gray-400 group-hover:text-primary-400 group-hover:-translate-x-1 transition-all" />
                                 <div className="text-left">
-                                    <p className="text-sm text-dark-400">Previous</p>
-                                    <p className="font-medium text-dark-900 dark:text-white group-hover:text-primary-500 transition-colors">
+                                    <p className="text-sm text-gray-500">Previous</p>
+                                    <p className="font-medium text-white group-hover:text-primary-400 transition-colors">
                                         {prevProject.title}
                                     </p>
                                 </div>
@@ -254,12 +256,12 @@ export default function CaseStudy() {
                                 className="flex items-center gap-3 group text-right"
                             >
                                 <div>
-                                    <p className="text-sm text-dark-400">Next</p>
-                                    <p className="font-medium text-dark-900 dark:text-white group-hover:text-primary-500 transition-colors">
+                                    <p className="text-sm text-gray-500">Next</p>
+                                    <p className="font-medium text-white group-hover:text-primary-400 transition-colors">
                                         {nextProject.title}
                                     </p>
                                 </div>
-                                <ArrowRight className="w-5 h-5 text-dark-400 group-hover:text-primary-500 group-hover:translate-x-1 transition-all" />
+                                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-primary-400 group-hover:translate-x-1 transition-all" />
                             </Link>
                         ) : (
                             <div />

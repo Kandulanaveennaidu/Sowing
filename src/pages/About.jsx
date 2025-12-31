@@ -28,9 +28,9 @@ const values = [
 ]
 
 const stats = [
-    { value: '1+', label: 'Years of Experience', icon: Clock },
+    { value: '5+', label: 'Years of Experience', icon: Clock },
     { value: '150+', label: 'Projects Completed', icon: Briefcase },
-    { value: '20+', label: 'Happy Clients', icon: Smile },
+    { value: '50+', label: 'Happy Clients', icon: Smile },
     { value: '15+', label: 'Team Members', icon: UserCheck }
 ]
 

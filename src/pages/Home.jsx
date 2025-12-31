@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import Hero from '../components/sections/Hero'
+import ClientLogos from '../components/sections/ClientLogos'
 import ServicesOverview from '../components/sections/ServicesOverview'
-import FeaturedWork from '../components/sections/FeaturedWork'
 import ProcessTimeline from '../components/sections/ProcessTimeline'
 import TestimonialsSlider from '../components/sections/TestimonialsSlider'
 import CTABanner from '../components/sections/CTABanner'
@@ -15,9 +15,8 @@ export default function Home() {
             </Helmet>
 
             <Hero />
-            {/* Removed ClientLogos section */}
+            <ClientLogos />
             <ServicesOverview />
-            <FeaturedWork />
             <ProcessTimeline />
             <TestimonialsSlider />
             <CTABanner />

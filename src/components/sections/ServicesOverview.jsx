@@ -17,7 +17,7 @@ export default function ServicesOverview() {
                 <SectionHeading
                     label="Our Services"
                     title="Everything You Need to Succeed Online"
-                    subtitle="From strategy to execution, we offer comprehensive digital services that help businesses thrive in the digital age."
+                    subtitle="We provide digital marketing, UI/UX design, web development, and graphic design services to help businesses grow online."
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

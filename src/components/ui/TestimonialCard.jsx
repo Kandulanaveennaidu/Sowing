@@ -52,9 +52,11 @@ export default function TestimonialCard({
                 )}
                 <div>
                     <p className="font-semibold text-white">{author}</p>
-                    <p className="text-sm text-gray-500">
-                        {role} at {company}
-                    </p>
+                    {role && company && (
+                        <p className="text-sm text-gray-500">
+                            {role} at {company}
+                        </p>
+                    )}
                 </div>
             </div>
         </motion.div>

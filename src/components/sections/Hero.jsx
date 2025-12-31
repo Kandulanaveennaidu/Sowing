@@ -1,14 +1,20 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, BarChart3, TrendingUp, Award } from 'lucide-react'
 import Button from '../ui/Button'
+import digitalMarketingBg from '../../assets/digital-marketing-bg.png'
 
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 -z-10">
-                {/* Gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-950 to-black" />
+                {/* Digital Marketing Background Image */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: `url(${digitalMarketingBg})` }}
+                />
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-950/85 to-black/80" />
 
                 {/* Animated gradient orbs */}
                 <motion.div
@@ -36,8 +42,13 @@ export default function Hero() {
                     className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-accent-600/20 to-primary-600/20 blur-3xl"
                 />
 
+                {/* Animated Texture Overlay */}
+                <div className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none mix-blend-overlay">
+                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] animate-noise" />
+                </div>
+
                 {/* Grid pattern */}
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50" />
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30" />
             </div>
 
             <div className="container-custom">
@@ -51,7 +62,7 @@ export default function Hero() {
                     >
                         <Sparkles className="w-4 h-4 text-primary-400" />
                         <span className="text-sm font-semibold text-primary-300 uppercase tracking-wider">
-                            AGENCY
+                            GROWTH PARTNER
                         </span>
                     </motion.div>
 
@@ -81,7 +92,7 @@ export default function Hero() {
                         <div className="w-1.5 h-1.5 rounded-full bg-gray-600 hidden sm:block" />
                         <div className="flex items-center gap-2 text-gray-300">
                             <TrendingUp className="w-5 h-5 text-accent-400" />
-                            <span className="font-semibold">Management</span>
+                            <span className="font-semibold">Design and Strategy</span>
                         </div>
                         <div className="w-1.5 h-1.5 rounded-full bg-gray-600 hidden sm:block" />
                         <div className="flex items-center gap-2 text-gray-300">
@@ -122,9 +133,9 @@ export default function Hero() {
                         className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-16 pt-16 border-t border-white/10"
                     >
                         {[
-                            { value: '1+', label: 'Years Experience' },
+                            { value: '5+', label: 'Years Experience' },
                             { value: '150+', label: 'Projects Completed' },
-                            { value: '20+', label: 'Happy Clients' },
+                            { value: '50+', label: 'Happy Clients' },
                             { value: '15+', label: 'Team Members' }
                         ].map((stat, index) => (
                             <motion.div

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Twitter, Linkedin, Instagram, MessageCircle, Mail, MapPin, Phone } from 'lucide-react'
 import { footerLinks, socialLinks, contactInfo } from '../../data/navigation'
-import sowingLogo from '../../assets/sowing.jpg'
+import sowingLogo from '../../assets/Sowing logo- Tbg.png'
 
 const iconMap = {
     Twitter,
@@ -25,7 +25,7 @@ export default function Footer() {
                             <img
                                 src={sowingLogo}
                                 alt="Sowing Digital Agency"
-                                className="h-16 w-auto rounded-xl border-2 border-primary-500/30 shadow-lg shadow-primary-500/20"
+                                className="h-44 w-auto object-contain brightness-0 invert"
                             />
                         </Link>
 

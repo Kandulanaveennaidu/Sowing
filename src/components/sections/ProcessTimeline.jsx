@@ -100,7 +100,7 @@ export default function ProcessTimeline() {
                     className="text-center mt-12"
                 >
                     <a
-                        href="/process"
+                        href="/services"
                         className="inline-flex items-center gap-2 text-primary-400 font-medium hover:gap-3 transition-all"
                     >
                         Learn more about our process

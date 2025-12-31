@@ -4,7 +4,7 @@ export const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Work', href: '/portfolio' },
+    { name: 'Blogs', href: '/blogs' },
     { name: 'Process', href: '/process' },
     { name: 'Contact', href: '/contact' }
 ]
@@ -35,15 +35,15 @@ export const footerLinks = {
 
 export const socialLinks = [
     { name: 'Twitter', href: 'https://twitter.com', icon: 'Twitter' },
-    { name: 'LinkedIn', href: 'https://linkedin.com', icon: 'Linkedin' },
-    { name: 'Instagram', href: 'https://instagram.com', icon: 'Instagram' },
-    { name: 'WhatsApp', href: 'https://wa.me/917995684515', icon: 'MessageCircle' }
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/sowingspace/', icon: 'Linkedin' },
+    { name: 'Instagram', href: 'https://www.instagram.com/sowing_space?igsh=bWZoZWpzdGU2em9n', icon: 'Instagram' },
+    { name: 'WhatsApp', href: 'https://wa.me/919550052294', icon: 'MessageCircle' }
 ]
 
 export const contactInfo = {
     email: 'sowingspace01@gmail.com',
-    phone: '+91 79956 84515',
-    whatsapp: '+917995684515',
+    phone: '+91 95500 52294',
+    whatsapp: '+919550052294',
     address: 'Ayyappa Society, Madhapur, Hyderabad',
     taglines: [
         { text: 'Digital Marketing | Management', icon: BarChart3 },

@@ -80,8 +80,6 @@ export default function TestimonialsSlider() {
                                 <TestimonialCard
                                     quote={testimonial.quote}
                                     author={testimonial.author}
-                                    role={testimonial.role}
-                                    company={testimonial.company}
                                     avatar={testimonial.avatar}
                                     rating={testimonial.rating}
                                 />

@@ -17,7 +17,8 @@ import {
     FileImage,
     Brush,
     FileText,
-    Video
+    Video,
+    Camera
 } from 'lucide-react'
 
 export const services = [
@@ -27,7 +28,7 @@ export const services = [
         shortDescription: 'Creating intuitive, beautiful interfaces that users love.',
         description: 'We craft exceptional user experiences through research-driven design. Our approach combines aesthetic excellence with usability principles to create digital products that delight users and achieve business objectives.',
         icon: Palette,
-        color: 'from-pink-500 to-rose-500',
+        color: 'from-blue-600 to-blue-400',
         features: [
             'User Research & Personas',
             'Information Architecture',
@@ -62,7 +63,7 @@ export const services = [
         shortDescription: 'Building fast, scalable web applications with modern tech.',
         description: 'We build high-performance web applications using cutting-edge technologies. From React-powered SPAs to full-stack solutions, we deliver code that\'s clean, maintainable, and built for scale.',
         icon: Code,
-        color: 'from-blue-500 to-cyan-500',
+        color: 'from-purple-600 to-purple-400',
         features: [
             'React & Next.js Applications',
             'E-commerce Solutions',
@@ -97,7 +98,7 @@ export const services = [
         shortDescription: 'Memorable logos that capture your brand essence.',
         description: 'Your logo is the face of your brand. We create distinctive, memorable logos that communicate your brand\'s personality and values at a glance. Our logo design process ensures your mark stands out in any context.',
         icon: FileImage,
-        color: 'from-indigo-500 to-purple-500',
+        color: 'from-orange-500 to-amber-500',
         features: [
             'Brand Discovery Session',
             'Concept Development',
@@ -232,38 +233,38 @@ export const services = [
         ]
     },
     {
-        id: 'mobile-app-design',
-        title: 'Mobile App Design',
-        shortDescription: 'Native app experiences for iOS and Android.',
-        description: 'We design beautiful, intuitive mobile applications that users love. From concept to app store, we create native experiences optimized for iOS and Android platforms with attention to platform-specific guidelines.',
-        icon: Smartphone,
+        id: 'photography',
+        title: 'Photography',
+        shortDescription: 'Professional photography that captures your brand.',
+        description: 'We provide high-quality photography services to showcase your products, team, and events. Our professional photos help you build trust and engage your audience.',
+        icon: Camera,
         color: 'from-cyan-500 to-blue-500',
         features: [
-            'iOS & Android Design',
-            'User Flow Mapping',
-            'Interactive Prototypes',
-            'Platform Guidelines',
-            'App Store Assets',
-            'Micro-interactions'
+            'Product Photography',
+            'Corporate Headshots',
+            'Event Photography',
+            'Brand Lifestyle Shoots',
+            'Photo Editing',
+            'Studio Lighting'
         ],
         deliverables: [
-            'Complete app UI designs',
-            'Interactive prototype',
-            'App store screenshots & graphics',
-            'Icon design',
-            'Design specifications for developers'
+            'High-resolution edited photos',
+            'Web-optimized versions',
+            'Retouched images',
+            'Full usage rights',
+            'Online gallery'
         ],
         benefits: [
-            'Engaging user experience',
-            'Higher app store ratings',
-            'Increased user retention',
-            'Reduced development iterations'
+            'Professional brand image',
+            'Higher engagement',
+            'Better product presentation',
+            'Authentic storytelling'
         ],
         process: [
-            { step: 'Research', description: 'Understanding users and platform' },
-            { step: 'Design', description: 'Creating intuitive interfaces' },
-            { step: 'Prototype', description: 'Testing flows and interactions' },
-            { step: 'Handoff', description: 'Developer-ready specifications' }
+            { step: 'Plan', description: 'Shot list and creative direction' },
+            { step: 'Shoot', description: 'Professional on-location or studio session' },
+            { step: 'Edit', description: 'Color correction and retouching' },
+            { step: 'Deliver', description: 'Final high-res images' }
         ]
     },
     {
@@ -480,58 +481,64 @@ export const services = [
 
 export const servicesOverview = [
     {
+        icon: Megaphone,
+        title: 'Digital Marketing Services',
+        description: 'End-to-end digital marketing services to increase online visibility, engagement, and business growth.',
+        link: '/services/digital-marketing'
+    },
+    {
         icon: Palette,
         title: 'UI/UX Design',
-        description: 'Research-driven design that creates intuitive and beautiful user experiences.',
+        description: 'User-centric UI/UX design that creates intuitive, engaging, and conversion-focused digital experiences.',
         link: '/services/ui-ux-design'
     },
     {
         icon: Code,
         title: 'Web Development',
-        description: 'High-performance web applications built with modern technologies.',
+        description: 'Scalable and high-performance web development solutions built for speed, security, and usability.',
         link: '/services/web-development'
     },
     {
-        icon: FileImage,
-        title: 'Logo Design',
-        description: 'Memorable logos that capture your brand essence and values.',
-        link: '/services/logo-design'
-    },
-    {
         icon: Search,
-        title: 'SEO Optimization',
-        description: 'Boost your visibility and rank higher on search engines.',
+        title: 'Search Engine Optimization (SEO)',
+        description: 'SEO services that improve search rankings, organic traffic, and long-term online visibility.',
         link: '/services/seo-optimization'
     },
     {
-        icon: Megaphone,
-        title: 'Digital Marketing',
-        description: 'Strategic campaigns that grow your online presence.',
-        link: '/services/digital-marketing'
+        icon: Users,
+        title: 'Social Media Marketing (SMM)',
+        description: 'Strategic social media marketing to build brand presence, engagement, and audience growth.',
+        link: '/services/social-media-marketing'
+    },
+    {
+        icon: Target,
+        title: 'Pay-Per-Click Advertising (PPC)',
+        description: 'Data-driven PPC advertising campaigns designed to generate quality leads and measurable results.',
+        link: '/services/ppc-advertising'
     },
     {
         icon: Brush,
-        title: 'Graphic Design',
-        description: 'Visual designs for print and digital that captivate audiences.',
+        title: 'Graphic Designing Services',
+        description: 'Creative graphic designing services for branding, marketing creatives, and visual communication.',
         link: '/services/graphic-design'
     },
     {
-        icon: FileText,
-        title: 'Content Writing',
-        description: 'Compelling content that engages your audience and converts.',
-        link: '/services/content-writing'
-    },
-    {
         icon: Video,
-        title: 'Video Creation',
-        description: 'Engaging videos that tell your brand story effectively.',
+        title: 'Video Editing Services',
+        description: 'Professional video editing services for promotional videos, ads, reels, and brand storytelling.',
         link: '/services/video-creation'
     },
     {
-        icon: Smartphone,
-        title: 'Mobile App Design',
-        description: 'Native app experiences for iOS and Android platforms.',
-        link: '/services/mobile-app-design'
+        icon: Camera,
+        title: 'Photography',
+        description: 'Professional photography that captures your brand essence.',
+        link: '/services/photography'
+    },
+    {
+        icon: BarChart3,
+        title: 'Analytics and Reporting',
+        description: 'Analytics and reporting solutions that track performance, insights, and data-driven improvements.',
+        link: '/services/analytics-reporting'
     }
 ]
 

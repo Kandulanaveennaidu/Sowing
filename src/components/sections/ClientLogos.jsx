@@ -54,13 +54,13 @@ export default function ClientLogos() {
                     }}
                 >
                     {[...logos, ...logos, ...logos].map((logo, index) => (
-                        <div key={`${logo.id}-${index}`} className="flex items-center justify-center min-w-[120px] h-20 hover:opacity-100 transition-opacity duration-300 opacity-80">
+                        <div key={`${logo.id}-${index}`} className="flex items-center justify-center min-w-[140px] h-28 hover:opacity-100 transition-opacity duration-300 opacity-80">
                             <img
                                 src={logo.logo}
                                 alt={`${logo.name} logo`}
-                                className={`max-h-full max-w-[150px] object-contain ${logo.hasWhiteBg
-                                        ? 'invert grayscale contrast-200 mix-blend-screen'
-                                        : 'brightness-0 invert'
+                                className={`max-h-full max-w-[180px] object-contain ${logo.hasWhiteBg
+                                    ? 'invert grayscale contrast-200 mix-blend-screen'
+                                    : 'brightness-0 invert'
                                     }`}
                             />
                         </div>

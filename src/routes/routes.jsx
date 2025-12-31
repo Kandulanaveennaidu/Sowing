@@ -9,6 +9,7 @@ import CaseStudy from '../pages/CaseStudy'
 import Process from '../pages/Process'
 import Testimonials from '../pages/Testimonials'
 import Contact from '../pages/Contact'
+// import Blogs from '../pages/Blogs'
 
 export default function AppRoutes() {
     return (
@@ -21,6 +22,7 @@ export default function AppRoutes() {
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/portfolio/:caseStudyId" element={<CaseStudy />} />
                 <Route path="/process" element={<Process />} />
+                {/* <Route path="/blogs" element={<Blogs />} /> */}
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/contact" element={<Contact />} />
                 {/* 404 fallback */}
